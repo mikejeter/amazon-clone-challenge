@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
 
 function Header() {
     return (
@@ -9,10 +10,13 @@ function Header() {
          <HeaderLogo>
              <img src={"https://www.michael-jeter.com/amazon_PNG11.png"}/>
          </HeaderLogo>
-         <HeaderOptionAdress>
-             <OptionLineOne>Hello</OptionLineOne>
-             <OptionLineTwo>Select your address</OptionLineTwo>
 
+         <HeaderOptionAdress>
+             <LocationOnIcon/>
+             <HeaderOption>
+                <OptionLineOne>Hello</OptionLineOne>
+                <OptionLineTwo>Select your address</OptionLineTwo>
+             </HeaderOption>
          </HeaderOptionAdress>
          <HeaderSearch>
              <SearchInput type="text" />
@@ -40,7 +44,7 @@ function Header() {
     )
 }
 
-export default Header
+export default Header;
 
 const Container = styled.div`
 height: 60 px;
@@ -59,7 +63,9 @@ const HeaderLogo = styled.div`
 `
 
 const HeaderOptionAdress = styled.div`
-
+padding-left: 10px;
+display: flex;
+align-items: center;
 `
 
 const OptionLineOne = styled.div`
@@ -74,10 +80,21 @@ const HeaderSearch = styled.div`
 display: flex;
 flex-grow: 1;
 height: 40px;
+border-radius: 5px;
+overflow: hidden;
+margin-left: 4px;
+background-color: white;
+:focus-within {
+    box-shadow: 0 0 0 3px #F90;
+}
 `
 
 const SearchInput = styled.input`
 flex-grow: 1;
+border: 0;
+:focus {
+    outline: none;
+}
 `
 
 const HeaderSearchIcon = styled.div`
@@ -98,9 +115,12 @@ padding: 10px 9px 10px 9px;
 `
 
 const HeaderOptionCart = styled.div`
-
+display: flex;
+align-items: center;
+padding-right: 10px;
+padding-left: 10px;
 `
 
 const CartCount = styled.div`
-
+padding-right: 10px;
 `
