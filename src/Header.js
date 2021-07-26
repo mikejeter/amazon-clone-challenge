@@ -3,12 +3,15 @@ import styled from 'styled-components';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
+import { Link } from 'react-router-dom';
 
 function Header() {
     return (
       <Container>
          <HeaderLogo>
+             <Link to="/">
              <img src={"https://www.michael-jeter.com/amazon_PNG11.png"}/>
+             </Link>
          </HeaderLogo>
 
          <HeaderOptionAdress>
@@ -34,10 +37,13 @@ function Header() {
                  <OptionLineTwo>& Options</OptionLineTwo>
              </HeaderOption>
              <HeaderOptionCart>
-                 <ShoppingBasketIcon />
-                 <CartCount>5</CartCount>
-
+                 < Link to = "/Cart" >
+                <ShoppingBasketIcon />
+                <CartCount>5</CartCount>
+                </Link>
              </HeaderOptionCart>
+             
+             
          </HeaderNavItems>
       </Container>
         
@@ -119,6 +125,14 @@ display: flex;
 align-items: center;
 padding-right: 10px;
 padding-left: 10px;
+display: flex;
+a {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    color: white;
+    text-decoration: none;
+}
 `
 
 const CartCount = styled.div`
