@@ -5,15 +5,15 @@ function Product() {
     return (
         <Container>
            <Title>
-               Ipad Pro
+               2020 Apple iPad Pro (12.9-inch, Wi-Fi, 256GB) - Space Gray (4th Generation) 
            </Title>
            <Price>
                $1299.00
            </Price>
            <Rating>
-            ⭐⭐⭐⭐
+            ⭐⭐⭐⭐⭐
            </Rating>
-           <Image src ="https://images-na.ssl-images-amazon.com/images/G/01/apparel/rcxgs/tile._CB483369110_.gif" />
+           <Image src ="https://michael-jeter.com/apple_mxau2ll_a_12_9_ipad_pro_early_1553829.jpg" />
            <ActionSection>
              <AddToCartButton>
               Add to Cart
